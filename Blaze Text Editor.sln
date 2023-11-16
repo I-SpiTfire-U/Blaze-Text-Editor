@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34202.233
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blaze Text Editor", "Blaze Text Editor\Blaze Text Editor.csproj", "{C882AFEE-D256-46EE-AD22-F319CF228427}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C882AFEE-D256-46EE-AD22-F319CF228427}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C882AFEE-D256-46EE-AD22-F319CF228427}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C882AFEE-D256-46EE-AD22-F319CF228427}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C882AFEE-D256-46EE-AD22-F319CF228427}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A8E2020E-4EF1-4E20-AFFA-082A11F0E63A}
+	EndGlobalSection
+EndGlobal
