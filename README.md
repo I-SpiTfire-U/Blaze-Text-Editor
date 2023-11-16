@@ -46,3 +46,7 @@
   > Exits the program
 - C Key
   > Closes the file
+
+![image](https://github.com/I-SpiTfire-U/Blaze-Text-Editor/assets/92888352/6eb6b2f5-5f20-4ae9-88cb-3c180f7325c7)
+![image](https://github.com/I-SpiTfire-U/Blaze-Text-Editor/assets/92888352/b689551b-bf62-49f0-909e-7136b15ee2a5)
+
