@@ -68,6 +68,7 @@ namespace Blaze_Text_Editor
 
             while (true)
             {
+                Console.Title = $"Blaze Text Editor <{FilePath}>";
                 if (Lines.Count <= 0)
                 {
                     Lines.Add("");
