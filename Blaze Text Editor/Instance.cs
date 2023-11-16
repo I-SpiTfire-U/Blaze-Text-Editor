@@ -25,7 +25,6 @@ namespace Blaze_Text_Editor
                 { ConsoleKey.RightArrow, MoveCursorRight },
                 { ConsoleKey.OemPlus, ()=> TabSpaces++ },
                 { ConsoleKey.OemMinus, ()=> TabSpaces -= TabSpaces > 1 ? 1 : 0 },
-                { ConsoleKey.F1, OpenHelpFile },
                 { ConsoleKey.I, InsertAtCurrentLine },
                 { ConsoleKey.R, RemoveCurrentLine },
                 { ConsoleKey.O, OpenFile },
@@ -315,14 +314,6 @@ namespace Blaze_Text_Editor
         #endregion
 
         #region File Control
-
-        private void OpenHelpFile()
-        {
-            FilePath = @$"Help.txt";
-            ResetPositionAndLines(File.ReadAllLines(FilePath));
-            CheckIfReadOnly();
-            RefreshScreen();
-        }
 
         private void OpenFile()
         {
