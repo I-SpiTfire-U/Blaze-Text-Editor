@@ -9,8 +9,11 @@ namespace Blaze_Text_Editor
         private int ScrollIndex = 0;
         private int TabSpaces = 4;
 
-        private readonly int InfobarPosition = Console.WindowHeight - 1;
-        private readonly string BlankLine = new(' ', Console.WindowWidth - 1);
+        private int WindowWidth = Console.WindowWidth;
+        private int WindowHeight = Console.WindowHeight;
+
+        private int InfobarPosition = Console.WindowHeight - 1;
+        private string BlankLine = new(' ', Console.WindowWidth - 1);
         private readonly List<string> Lines = new();
         private readonly Dictionary<ConsoleKey, Action> ViewModeInput;
         private readonly Dictionary<ConsoleKey, Action> InsertModeInput;
@@ -63,6 +66,7 @@ namespace Blaze_Text_Editor
 
         internal void Start()
         {
+            CheckForWindowChanges();
             RefreshScreen();
             DrawInfoBar();
 
@@ -87,6 +91,28 @@ namespace Blaze_Text_Editor
                     ViewModeInput[key].Invoke();
                 }
             }
+        }
+
+        private async void CheckForWindowChanges()
+        {
+            await Task.Run(() =>
+            {
+                while (true)
+                {
+                    if (WindowWidth != Console.WindowWidth || WindowHeight != Console.WindowHeight)
+                    {
+                        WindowWidth = Console.WindowWidth;
+                        WindowHeight = Console.WindowHeight;
+
+                        BlankLine = new(' ', Console.WindowWidth - 1);
+                        InfobarPosition = Console.WindowHeight - 1;
+
+                        RefreshScreen();
+                        DrawInfoBar();
+                    }
+                    Thread.Sleep(1000);
+                }
+            });
         }
 
         private void ResetPositionAndLines(params string[] lines)
